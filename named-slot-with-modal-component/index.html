@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>learn vuejs 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <style>
+        body {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root" class="container">
+    <modal>
+        <template slot="title">That's My Title</template>
+
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+        <template slot="footer">
+            <button class="button is-success">Save changes</button>
+            <button class="button">Cancel</button>
+        </template>
+    </modal>
+</div>
+
+<script>
+    Vue.config.devtools = true;
+</script>
+<script src="main.js"></script>
+
+</body>
+</html>

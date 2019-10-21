@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>learn vuejs 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.0"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <style>
+        body {
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root" class="container">
+    <tabs>
+        <tab name="Picture" :selected="true">
+            <h2>Picture Content Here</h2>
+        </tab>
+        <tab name="Video">
+            <h2>Video Content Here</h2>
+        </tab>
+        <tab name="Football">
+            <h2>Football Content Here</h2>
+        </tab>
+    </tabs>
+</div>
+
+<script>
+    Vue.config.devtools = true;
+</script>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/statuses','UserStatusesController@index');
+Route::post('/statuses','UserStatusesController@store');

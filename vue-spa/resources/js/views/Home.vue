@@ -9,31 +9,40 @@
                 {{status.message}}
             </div>
         </article>
+
+        <add-status></add-status>
     </div>
 </template>
 
 <script>
     import moment from 'moment';
     import Status from '../models/Status';
+    import AddStatus from '../components/AddStatus';
 
     export default {
         name: "Home",
+        components: {AddStatus},
         data() {
             return {
                 statuses: []
             }
         },
-        filters:{
-            ago(date){
+        filters: {
+            ago(date) {
                 return moment(date).fromNow();
             }
         },
         mounted() {
             Status.all()
                 .then(({data}) => this.statuses = data);
+
+            let self=this;
+
+            Event.$on('onAddedStatus', function (status) {
+                self.statuses.push(status);
+            });
         },
-        methods: {
-        }
+        methods: {}
     }
 </script>
 

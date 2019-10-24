@@ -3,7 +3,7 @@
         <article v-for="status in statuses" class="message is-info">
             <div class="message-header">
                 <p>{{status.user.name}} said...</p>
-                <span>{{postedOn(status)}}</span>
+                <span>{{status.created_at | ago}}</span>
             </div>
             <div class="message-body">
                 {{status.message}}
@@ -23,14 +23,16 @@
                 statuses: []
             }
         },
+        filters:{
+            ago(date){
+                return moment(date).fromNow();
+            }
+        },
         mounted() {
             Status.all()
                 .then(({data}) => this.statuses = data);
         },
         methods: {
-            postedOn(status) {
-                return moment(status.created_at).fromNow();
-            }
         }
     }
 </script>

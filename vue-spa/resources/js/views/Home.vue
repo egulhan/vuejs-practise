@@ -36,10 +36,14 @@
             Status.all()
                 .then(({data}) => this.statuses = data);
 
-            let self=this;
+            let self = this;
 
             Event.$on('onAddedStatus', function (status) {
-                self.statuses.push(status);
+                self.statuses.unshift(status);
+
+                alert('New status has been added!');
+
+                window.scrollTo(0, 0);
             });
         },
         methods: {}

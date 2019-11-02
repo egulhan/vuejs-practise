@@ -1,9 +1,14 @@
+#What Will You Learn?
+- parent component(Accordion) communicates to children components(AccordionItem) through **PROPS**
+- children components(AccordionItem) communicate to parent component(Accordion) through **EVENTS** 
+
 #Stand-alone Project Setup
 
 run the following commands:
 ~~~
 npm init -y
 npm i laravel-mix --save-dev
+npm i vue --save-dev
 cp node_modules/laravel-mix/setup/webpack.mix.js ./
 mkdir src && touch src/app.{js,scss}
 ~~~

@@ -1,0 +1,9 @@
+@import "~tailwindcss/dist/tailwind.min.css";
+
+.accordion-item{
+  cursor: pointer;
+}
+
+.accordion-item.accordion-open{
+  cursor: grab;
+}

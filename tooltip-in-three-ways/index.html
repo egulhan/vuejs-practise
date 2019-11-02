@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooltip in Three Ways</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <link rel="stylesheet" href="dist/app.css">
+    <style>
+        .tooltip{
+            background: black;
+            padding: 5px 8px;
+            border-radius: 10px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+<section class="section" id="root">
+    <div class="container">
+        <p>
+            <strong data-tooltip="true" data-tooltip-title="First Tooltip!">1- Tooltip via Data Attribute</strong>
+        </p>
+        <p>
+            <strong v-tooltip="'Second Tooltip!'">2- Tooltip via Dedicated Vue Directive</strong>
+        </p>
+        <tooltip>
+            <div>
+                <h2>3- Tooltip via Component</h2>
+                <p>This is HTML content</p>
+            </div>
+        </tooltip>
+    </div>
+</section>
+
+<script src="dist/app.js"></script>
+</body>
+</html>

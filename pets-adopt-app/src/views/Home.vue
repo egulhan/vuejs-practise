@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    <p>We have {{animalsCount}} pets</p><br>
+
     <b-button v-b-modal.modal-1>Add a New Pet</b-button>
 
     <b-modal id="modal-1" title="Add a New Pet" hide-footer>
@@ -94,7 +96,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 export default {
   name: 'Home',
   data () {
@@ -130,6 +132,9 @@ export default {
       'breeds',
       'genders',
       'species'
+    ]),
+    ...mapGetters([
+      'animalsCount'
     ])
   }
 }

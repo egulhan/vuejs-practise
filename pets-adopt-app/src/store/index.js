@@ -9,6 +9,7 @@ export default new Vuex.Store({
   state: {
     cats,
     dogs,
+    pets: [...cats, ...dogs],
     breeds: [
       'tuxedo',
       'tabby',
@@ -31,6 +32,11 @@ export default new Vuex.Store({
   actions: {
     addPet ({ commit }, payload) {
       commit('appendPet', payload)
+    }
+  },
+  getters: {
+    animalsCount: (state) => {
+      return state.pets.length
     }
   },
   modules: {

@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Dogs from '../views/Dogs.vue'
 import Cats from '../views/Cats.vue'
-import Pet from '../views/Pet.vue'
+import PetCat from '../views/PetCat'
+import PetDog from '../views/PetDog'
 
 Vue.use(VueRouter)
 
@@ -24,9 +25,14 @@ const routes = [
     component: Cats
   },
   {
-    path: '/pet',
-    name: 'Pet',
-    component: Pet
+    path: '/pets/cat/:id',
+    name: 'PetCat',
+    component: PetCat
+  },
+  {
+    path: '/pets/dog/:id',
+    name: 'PetDog',
+    component: PetDog
   }
   // {
   //   path: '/about',

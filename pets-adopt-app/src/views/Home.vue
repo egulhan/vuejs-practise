@@ -1,5 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home-view-container">
+    <h1>Pets Adopt App</h1>
+
     <p>We have {{animalsCount}} pets</p><br>
 
     <b-button v-b-modal.modal-1>Add a New Pet</b-button>
